@@ -12,7 +12,6 @@
 .wrapper{
     margin: 0 auto;
     padding: 1%;
-    
     width: 80%;
 
 }
@@ -33,31 +32,35 @@ a{
 }
 
 .menu{
-    background-color: rgb(62, 59, 59);
-    color: white;
+    background-color: white;
     text-align: center;
-    padding: 3%;
+    padding: 1%;
+    border-bottom: 1px solid gray;
 
 }
-.menu ul{
-  list-style-type: none;
-    
+.main .wrapper{
+    background-color: transparent;
 }
-.menu ul li{
+.main .wrapper ul  {
+    background-color: transparent; 
+    list-style-type: none;
+}
+
+.menu .wrapper ul li{
     display: inline;
     padding: 1%;
     list-style: none;
+    background-color: transparent;
 }
-.menu ul li a{
+.menu .wrapper ul li a{
     text-decoration: none;
     font-weight: bold;
     color: #ff6b81; 
+    background-color: transparent;
 }
 .menu ul li a:hover{
     color: #ff4757;
 }
-
-
 
 .main{
     margin: 1%;

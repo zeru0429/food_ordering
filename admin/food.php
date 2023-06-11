@@ -1,9 +1,9 @@
 <?php include("./parts/menu.php") ?>
 
-    <!----------  Main section ----------->
-    <div class="main">
+   <!----------  Main section ----------->
+   <div class="main">
     <div class="wrapper">
-    <h1>Admin Manage</h1 >
+    <h1>Food Manage</h1 >
 
 
 <div class="clear-fixt"></div>
@@ -14,7 +14,8 @@
 
     <!----X-----  Main section -----X----->
 
-    
 
 
-    <?php  include("./parts/footer.php") ?>
+
+
+<?php  include("./parts/footer.php") ?>
