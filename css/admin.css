@@ -75,3 +75,64 @@ a{
 }
 
 
+.menu{
+    background-color: white;
+}
+
+.menu .wrapper ul li{
+    background-color: white;
+}
+
+.fullwidth{
+    width: 100%;
+}
+
+table tr th{
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    padding: 1%;
+    text-align: left;
+}
+
+table tr td{
+    padding: 1%;
+}
+
+.btn-primary{
+    background-color: #1e90ff;
+    padding: 0.81%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-primary:hover{
+    background-color: #3742fa;
+}
+
+.btn-sec{
+    background-color: #7bed9f;
+    padding: 0.81%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-sec:hover{
+    background-color: #2ed573;
+}
+
+.btn-dang{
+    background-color: #ff6b81;
+    padding: 0.81%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-dang:hover{
+    background-color: #ff4757;
+}
+
+
+
+
+
+

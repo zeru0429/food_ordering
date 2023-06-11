@@ -4,7 +4,27 @@
    <div class="main">
     <div class="wrapper">
     <h1>Order Manage</h1 >
+   
+    <table class="fullwidth">
+        <tr>
+            <th>Id</th>
+            <th>Full name</th>
+            <th>Username</th>
+            <th>Actions</th>
+        </tr>
 
+        <tr>
+            <td>1</td>
+            <td>mihiretu</td>
+            <td>zeru0429</td>
+            <td>
+               <a href="#" class="btn-sec">Update Admin</a> 
+               <a href="#" class="btn-dang">Delete Admin</a> 
+            </td>
+        </tr>
+
+
+    </table>
 
 <div class="clear-fixt"></div>
     </div>
