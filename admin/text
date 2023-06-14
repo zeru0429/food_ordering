@@ -1,0 +1,13 @@
+ <tr>
+            <td>1</td>
+            <td>mihiretu</td>
+            <td>zeru0429</td>
+            <td>
+               <a href="#" class="btn-sec">Update Admin</a> 
+               <a href="#" class="btn-dang">Delete Admin</a> 
+            </td>
+        </tr>
+
+
+        <td><input type="text" name="catagory" placeholder='catagory'></td>
+            

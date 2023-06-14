@@ -1,3 +1,7 @@
+<?php include("../config/constant.php");
+      include("logincheck.php");  
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +12,6 @@
 </head>
 <body>
     <!----------  Header section ----------->
-
     <div class="menu">
     <div class="wrapper">
         <ul>
@@ -17,6 +20,7 @@
             <li><a href="catagory.php">Catagory</a></li>
             <li><a href="food.php">Food</a></li>
             <li><a href="order.php">Order</a></li>
+            <li><a href="logout.php">Logout</a></li>
         </ul>
     </div>
 

@@ -87,6 +87,10 @@ a{
     width: 100%;
 }
 
+.halfwidth{
+    width: 50%;
+}
+
 table tr th{
     font-weight: bold;
     border-bottom: 1px solid black;
@@ -97,6 +101,9 @@ table tr th{
 table tr td{
     padding: 1%;
 }
+
+
+
 
 .btn-primary{
     background-color: #1e90ff;
@@ -111,8 +118,8 @@ table tr td{
 
 .btn-sec{
     background-color: #7bed9f;
+    color: black;
     padding: 0.81%;
-    color: white;
     text-decoration: none;
     font-weight: bold;
 }
@@ -131,7 +138,23 @@ table tr td{
     background-color: #ff4757;
 }
 
+.btn-three{
+    background-color: #2b6df2;
+    padding: 0.81%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-three:hover{
+    background-color: #1e1aef;
+}
 
+.error{
+    color: #ff4757;
+}
+.success{
+    color: #2ed573;
+}
 
 
 
