@@ -70,10 +70,11 @@ if($result==TRUE){ // check if query is successfully excuted
             
                         if ($rows>0){// check the numbers of data in db
                             while($rows=mysqli_fetch_assoc($result)){
-                                $id=$rows['id'];
-                                $title = $rows['title'];
+                                $id1=$rows['id'];
+                                $title1 = $rows['title'];
+
                              ?>
-                    <option value="<?php echo $id;?>" > <?php echo $title; ?> </option> 
+                    <option value="<?php echo $id1;?>" <?php if($catagory_id==$id1) echo "selected";?> > <?php echo $title1; ?> </option> 
                    <?php 
                      }
 

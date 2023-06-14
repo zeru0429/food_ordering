@@ -1,58 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- Important to make website responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Website</title>
-
-    <!-- Link our CSS file -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-    <!-- Navbar Section Starts Here -->
-    <section class="navbar">
+<?php include("./part/menu.php"); 
+        include("./config/constant.php"); 
+?>
+    <!-- CAtegories Section Starts Here -->
+    <section class="categories">
         <div class="container">
-            <div class="logo">
-                <a href="#" title="Logo">
-                    <img src="images/logo.png" alt="Restaurant Logo" class="img-responsive">
-                </a>
-            </div>
+            <h2 class="text-center">Explore Foods</h2>
 
-            <div class="menu text-right">
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="categories.html">Categories</a>
-                    </li>
-                    <li>
-                        <a href="foods.html">Foods</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
+            <?php 
+             $query = "SELECT * FROM catagoy";
+             $result = mysqli_query($conn,$query) or die(mysqli_error());
+            
+             if($result==TRUE){ // check if query is successfully excuted
+                $rows = mysqli_num_rows($result);
+            
+                if ($rows>0){// check the numbers of data in db
+                    while($rows=mysqli_fetch_assoc($result)){
+                        $id=$rows['id'];
+                        $title = $rows['title'];
+                        $feature = $rows["feature"];
+                        $active = $rows["active"];
+                        $imagename= $rows["image_name"];
+               
+            
+?>            
+
+            <a href="category-foods.php">
+            <div class="box-3 float-container">
+                <img src="<?php echo HOMEURL."images/catagory/".$imagename; ?>" alt="<?php echo $imagename; ?>" class="img-responsive img-curve">
+
+                <h3 class="float-text text-white"><?php echo $title;?></h3>
             </div>
+            </a>
+
 
             <div class="clearfix"></div>
         </div>
     </section>
-    <!-- Navbar Section Ends Here -->
 
-    <!-- fOOD sEARCH Section Starts Here -->
-    <section class="food-search text-center">
-        <div class="container">
-            
-            <h2>Foods on <a href="#" class="text-white">"Category"</a></h2>
-
-        </div>
-    </section>
-    <!-- fOOD sEARCH Section Ends Here -->
+<?php    
+  }
+    
+}
 
 
+}
+?>
+
+    <!-- Categories Section Ends Here -->
 
     <!-- fOOD MEnu Section Starts Here -->
     <section class="food-menu">
@@ -72,7 +66,7 @@
                     </p>
                     <br>
 
-                    <a href="#" class="btn btn-primary">Order Now</a>
+                    <a href="order.html" class="btn btn-primary">Order Now</a>
                 </div>
             </div>
 
@@ -168,34 +162,9 @@
 
         </div>
 
+        <p class="text-center">
+            <a href="#">See All Foods</a>
+        </p>
     </section>
     <!-- fOOD Menu Section Ends Here -->
-
-    <!-- social Section Starts Here -->
-    <section class="social">
-        <div class="container text-center">
-            <ul>
-                <li>
-                    <a href="#"><img src="https://img.icons8.com/fluent/50/000000/facebook-new.png"/></a>
-                </li>
-                <li>
-                    <a href="#"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a>
-                </li>
-                <li>
-                    <a href="#"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!-- social Section Ends Here -->
-
-    <!-- footer Section Starts Here -->
-    <section class="footer">
-        <div class="container text-center">
-            <p>All rights reserved. Designed By <a href="#">Vijay Thapa</a></p>
-        </div>
-    </section>
-    <!-- footer Section Ends Here -->
-
-</body>
-</html>
+<?php   include("./part/footer.php");?>
