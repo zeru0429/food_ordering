@@ -37,7 +37,7 @@ include("./config/constant.php");?>
                     <p class="food-price"><?php echo $price; ?></p>
                     <p class="food-detail"> <?php echo $description; ?></p>
                     <br>
-                    <a href="#" class="btn btn-primary">Order Now</a>
+                    <a href="order.php?id=<?php echo $id;?>" class="btn btn-primary">Order Now</a>
                 </div>
             </div>
                             

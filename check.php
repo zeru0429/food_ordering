@@ -1,5 +1,4 @@
 <?php
-define('HOME',realpath($_SERVER["DOCUMENT_ROOT"]));
-echo HOME ;
 
+print_r( date('Y-m-d h:m:s'));
 ?>

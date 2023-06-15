@@ -1,6 +1,27 @@
 <?php include("./part/menu.php"); 
         include("./config/constant.php"); ?>
 
+ <!-- fOOD sEARCH Section Starts Here -->
+ <section class="food-search text-center">
+        <div class="container">
+            
+            <form action="food-search.php" method="POST">
+                <input type="search" name="search" placeholder="Search for Food.." required>
+                <input type="submit" name="submit" value="Search" class="btn btn-primary">
+            </form>
+
+        </div>
+        <?php
+
+if(isset($_SESSION['add'])){
+    echo "<h1 class='success'>". $_SESSION['add']."</h1>";
+    unset($_SESSION['add']);
+ }
+?>
+    </section>
+    <!-- fOOD sEARCH Section Ends Here -->
+
+
   <!-- CAtegories Section Starts Here -->
   <section class="categories">
         <div class="container">
@@ -23,7 +44,7 @@
             
             ?>
 
-                <a href="category-foods.php">
+                <a href="category-foods.php?id=<?php echo $id?>">
                     <div class="box-3 float-container">
                          <img src="images/catagory/<?php echo $imagename; ?>" alt="<?php echo $imagename; ?>" class="img-responsive img-curve">
 
@@ -52,7 +73,7 @@
 
             <?php
                 $query = "SELECT * FROM food where active='yes'";
-                $result = mysqli_query($conn,$query) or die(mysqli_error());;
+                $result = mysqli_query($conn,$query) or die(mysqli_error());
 
                 if($result==TRUE){ // check if query is successfully excuted
                     $rows = mysqli_num_rows($result);
@@ -80,7 +101,7 @@
                     <p class="food-price"><?php echo $price; ?></p>
                     <p class="food-detail"> <?php echo $description; ?></p>
                     <br>
-                    <a href="#" class="btn btn-primary">Order Now</a>
+                    <a href="order.php?id=<?php echo $id;?>" class="btn btn-primary">Order Now</a>
                 </div>
             </div>
                             
