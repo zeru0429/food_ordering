@@ -10,27 +10,46 @@
             }  
              ?>
     <div class="catagor text-center">
-        <h2>5</h2>
+  <?php  $query = "SELECT * from catagoy";
+    $result=mysqli_query($conn, $query);
+    $rows = mysqli_num_rows($result);
+
+    ?>
+        <h2><?php echo $rows?></h2>
         <br>
         Catagory
     </div>
     
     <div class="catagor text-center">
-        <h2>5</h2>
+    <?php  $query = "SELECT * from food";
+    $result=mysqli_query($conn, $query);
+    $rows = mysqli_num_rows($result);
+
+    ?>
+        <h2><?php echo $rows?></h2>
         <br>
-        Catagory
+        Food
     </div>
 
     <div class="catagor text-center">
-        <h2>5</h2>
+    <?php  $query = "SELECT * from orders";
+    $result=mysqli_query($conn, $query);
+    $rows = mysqli_num_rows($result);
+
+    ?>
+        <h2><?php echo $rows?></h2>
         <br>
-        Catagory
+        Toatal Order
     </div>
 
     <div class="catagor text-center">
-        <h2>5</h2>
+    <?php  $query = "SELECT SUM(total) as total_sum from orders where status ='yes'";
+    $result=mysqli_query($conn, $query);
+    $rows=mysqli_fetch_assoc($result);
+    $total=$rows['total_sum'];    ?>
+        <h2><?php echo $total; ?></h2>
         <br>
-        Catagory
+        Total Revenue
     </div>
 
 <div class="clear-fixt"></div>

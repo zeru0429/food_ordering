@@ -1,5 +1,9 @@
 <?php include("./part/menu.php"); 
 include("./config/constant.php"); 
+if(isset($_SESSION['add'])){
+    echo "<h1 class='success'>". $_SESSION['add']."</h1>";
+    unset($_SESSION['add']);
+}
 ?>
 
 
@@ -92,6 +96,7 @@ include("./config/constant.php");
     $contact = $_POST['contact']; 
     $email= $_POST['email'];
     $address= $_POST['address'];  
+    $active = "ordered";
     $quantity =$_POST['qty']; 
     $total = $quantity * $price;
     $orderd_date = date('Y-m-d h:m:s');    
